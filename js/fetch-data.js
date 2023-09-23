@@ -28,16 +28,21 @@ function displayData(data) {
         headerRow.appendChild(th);
     });
     table.appendChild(headerRow);
+	
+    const mdayValue = data[0].mday;
+    const mdayContainer = document.getElementById('mday-container');
+    mdayContainer.textContent = `Last Updated: ${mdayValue}`;
 
-    data.forEach(item => {
-        const row = document.createElement('tr');
-        headers.forEach(header => {
-            const td = document.createElement('td');
-            td.textContent = item[header];
-            row.appendChild(td);
-        });
-        table.appendChild(row);
-    });
+	const selectedHeaders = ['sna', 'tot', 'sbi', 'sarea', 'sareaen', 'bemp'];
+	data.forEach(item => {
+		const row = document.createElement('tr');
+		selectedHeaders.forEach(header => {
+			const td = document.createElement('td');
+			td.textContent = item[header];
+			row.appendChild(td);
+		});
+		table.appendChild(row);
+	});
 
     tableContainer.appendChild(table);
 }
