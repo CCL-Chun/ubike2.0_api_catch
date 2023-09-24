@@ -21,8 +21,8 @@ function displayData(data) {
     const tableContainer = document.getElementById('table-container');
     const table = document.createElement('table');
     const headerRow = document.createElement('tr');
-    const headers = Object.keys(data[0]);
-    headers.forEach(header => {
+    const customHeaders = ['Station', 'Available', 'District', 'District_en', 'Vacant', 'Overall Capacity'];
+    customHeaders.forEach(header => {
         const th = document.createElement('th');
         th.textContent = header;
         headerRow.appendChild(th);
@@ -33,7 +33,7 @@ function displayData(data) {
     const mdayContainer = document.getElementById('mday-container');
     mdayContainer.textContent = `Last Updated: ${mdayValue}`;
 
-	const selectedHeaders = ['sna', 'tot', 'sbi', 'sarea', 'sareaen', 'bemp'];
+	const selectedHeaders = ['sna', 'sbi', 'sarea', 'sareaen', 'bemp', 'tot'];
 	data.forEach(item => {
 		const row = document.createElement('tr');
 		selectedHeaders.forEach(header => {
