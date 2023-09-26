@@ -6,15 +6,35 @@
     <title>Categories | My New Hugo Site</title>
     <link rel="stylesheet" href="/ubike2.0_api_catch/css/style.css" />
     <link rel="stylesheet" href="/ubike2.0_api_catch/css/fonts.css" />
-    	
+    	<div class="outer-fixed-container">
+		
+		<div id="mday-container" class="inner-container"></div>
+		
+		<div class="inner-container">
+			<input type="text" id="search-input" placeholder="Search by Station Name">
+			<button onclick="searchTable()">Search</button>
+		</div>
+	</div>
+	<div class="table-scroll-container">
+		
+		<div id="table-container" class="inner-container">
+			<table>
+				<thead class="sticky-table-header">
+					
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
 	
-	<div id="mday-container"></div>
-	
-	
-	<div id="table-container"></div>
+	<script src="/ubike2.0_api_catch/js/fetch-data.js"> </script>
 
-    
-    <script src="/ubike2.0_api_catch/js/fetch-data.js"></script>
+	
+
+
+
   </head>
 
   <body>

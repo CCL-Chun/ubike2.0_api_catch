@@ -49,3 +49,26 @@ table {
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
+
+.outer-fixed-container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffffff;  
+    z-index: 1000;  
+}
+
+.table-scroll-container {
+	position: relative;
+    top: 60px;
+}
+
+.inner-container {
+    padding: 10px; 
+	overflow: visible;
+}
+
+.sticky-table-header {
+    position: sticky;
+	top: 80px;
+}
