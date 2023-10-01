@@ -50,6 +50,7 @@ table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
 thead, tfoot, tr:nth-child(even) { background: #eee; }
 
+/* Put header and fetch time */
 .outer-fixed-container {
     position: fixed;
     top: 0;
@@ -58,17 +59,19 @@ thead, tfoot, tr:nth-child(even) { background: #eee; }
     z-index: 1000;  
 }
 
+/* Put table contents */
 .table-scroll-container {
-	position: relative;
+    position: relative;
     top: 60px;
 }
 
 .inner-container {
     padding: 10px; 
-	overflow: visible;
+    overflow: visible;
 }
 
+/* Make header stay at top of the table */
 .sticky-table-header {
     position: sticky;
-	top: 80px;
+    top: 80px;
 }
