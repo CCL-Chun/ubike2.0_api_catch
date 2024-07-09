@@ -74,7 +74,7 @@ function displayData(data) {
     const mdayContainer = document.getElementById('mday-container');
     mdayContainer.textContent = `Last Updated: ${mdayValue}`;
     //Get table contents row by row
-    const selectedHeaders = ['sna', 'sbi', 'sarea', 'sareaen', 'bemp', 'tot'];
+    const selectedHeaders = ['sna', 'available_rent_bikes', 'sarea', 'sareaen', 'available_return_bikes', 'total'];
     data.forEach(item => {
 	const row = document.createElement('tr');
 	selectedHeaders.forEach(header => {
